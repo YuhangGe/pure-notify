@@ -8,7 +8,7 @@ const STATES = {
 const DEFAULT_OPTIONS = {
   transitionTime: 600,
   timeout: 4000,
-  template: `<div class="pure-notify {type}"><div class="title">{title}</div><div class="content">{content}</div><div class="close"></div></div>`,
+  template: `<div class="pure-notify {type}"><i class="pure-icon {type}"></i><div class="title">{title}</div><div class="content">{content}</div><i class="pure-icon close"></i></div>`,
   className: ''
 };
 
@@ -50,7 +50,7 @@ class NotifyItem {
     document.body.appendChild(this._$dom);
     this._render(options);
 
-    let _$close = this._$dom.querySelector('div.close');
+    let _$close = this._$dom.querySelector('.close');
     if (_$close) {
       _$close.addEventListener('click', () => {
         this._manager.close(this);

@@ -16,7 +16,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-js": "rollup -c rollup.config.js",
     "build-css": "lessc --source-map --source-map-less-inline ./src/index.less ./dist/pure-notify.css",
-    "minify-js": "cd ./dist && uglifyjs pure-notify.js --in-source-map pure-notify.js.map --source-map pure-notify.min.js.map -p 5 -m -c -o pure-notify.min.js",
+    "minify-js": "cd ./dist && uglifyjs pure-notify.js --comments --in-source-map pure-notify.js.map --source-map pure-notify.min.js.map -p 5 -m -c -o pure-notify.min.js",
     "minify-css": "lessc --clean-css --source-map --source-map-less-inline ./src/index.less ./dist/pure-notify.min.css",
     "clean": "rm -rf ./dist && mkdir ./dist",
     "build": "npm run clean && npm run build-js && npm run minify-js && npm run build-css && npm run minify-css"
@@ -28,6 +28,8 @@
   "keywords": [
     "notify",
     "notification",
+    "notifications",
+    "notifier",
     "javascript"
   ],
   "author": "Yuhang Ge <abeyuhang@gmail.com>",

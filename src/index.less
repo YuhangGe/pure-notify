@@ -1,65 +1,145 @@
+/*!
+ * @preserve
+ * pure-notify v1.0.0, https://github.com/YuhangGe/pure-notify
+ */
 .pure-notify-container {
 
-  width: 300px;
-  max-width: 100vh;
-  padding: 16px 16px 0 16px;
+  @MARGIN: 16px;
+
+  width: 100%;
+  padding: @MARGIN @MARGIN 0 @MARGIN;
+
+  @media (min-width: 768px) {
+    width: 33.333333333%;
+  }
 
   .pure-notify {
 
-  color: #333;
-  padding: 16px 30px 16px 16px;
-  position: relative;
+    color: #333;
+    padding: @MARGIN @MARGIN @MARGIN @MARGIN;
+    position: relative;
 
 
-  .title {
-    font-size: 16px;
-  }
-  .content {
-    font-size: 14px;
-  }
-
-  .close {
-    position: absolute;
-    color: #000;
-    margin-top: 0;
-    margin-left: 0;
-    width: 18px;
-    height: 18px;
-    top: 13px;
-    right: 10px;
-    cursor: pointer;
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: 10px;
-      width: 18px;
-      height: 1px;
-      -webkit-transform: rotate(-45deg);
-      transform: rotate(-45deg);
+    .title {
+      font-size: 16px;
+      // line-height: 1.3;
+      padding-left: 25px;
+      padding-right: 20px;
     }
-    &:after {
-      content: '';
+    .content {
+      font-size: 14px;
+      // line-height: 1.3;
+      padding-left: 25px;
+      padding-right: 20px;
+    }
+
+    i.pure-icon {
       position: absolute;
-      top: 10px;
-      width: 18px;
-      height: 1px;
-      -webkit-transform: rotate(45deg);
-      transform: rotate(45deg);
+      width: 17px;
+      height: 17px;
+      left: @MARGIN;
+      top: @MARGIN + 1px;
+      border-radius: 100%;
+      border: 1px solid transparent;
+
+      &:before, &:after {
+        content: '';
+        position: absolute;
+
+      }
+    }
+
+    i.pure-icon.close {
+      
+      right: @MARGIN / 2;
+      cursor: pointer;
+      left: auto;
+      top: @MARGIN / 2;
+
+      &:before {
+        top: 8px;
+        width: 14px;
+        background-color: #666;
+        height: 1px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+      &:after {
+        top: 8px;
+        width: 14px;
+        height: 1px;
+        background-color: #666;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+
+    i.pure-icon.info, i.pure-icon.warn {
+      border-color: #767676;
+      &:before {
+        width: 1px;
+        height: 1px;
+        top: 3px;
+        left: 7px;
+        border-radius: 100%;
+        background-color: #767676;
+      }
+      &:after {
+        width: 1px;
+        height: 6px;
+        background-color: #767676;
+        top: 6px;
+        left: 7px;
+      }
+    }
+
+    i.pure-icon.success {
+      border-color: #107c10;
+
+      &:before {
+        content: ' ';
+        position: absolute;
+        width: 8px;
+        top: 4px;
+        left: 3px;
+        height: 4px;
+        border-bottom: solid 1px #107c10;
+        border-left: solid 1px #107c10;
+        transform: rotate(-45deg);
+      }
+    }
+
+    i.pure-icon.error {
+      border-color: #a80000;
+
+      &:before, &:after {
+        top: 7px;
+        left: 3px;
+        transform-origin: center;
+        width: 9px;
+        height: 1px;
+        background-color: #a80000;
+      }
+      &:before {
+        transform: rotate(45deg);
+      }
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+
+
+    &.info {
+      background-color: #f4f4f4;
+    }
+    &.error {
+      background-color: #fde7e9;
+    }
+    &.warn {
+      background-color: #fff4ce;
+    }
+    &.success {
+      background-color: #dff6dd;
     }
   }
-
-  &.info {
-    background-color: #f4f4f4;
-  }
-  &.error {
-    background-color: #fde7e9;
-  }
-  &.warn {
-    background-color: #fff4ce;
-  }
-  &.success {
-    background-color: #dff6dd;
-  }
-}
 }
