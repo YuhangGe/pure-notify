@@ -2,6 +2,17 @@
 
 javascript notify component without any dependencies such as jquery, react or angular
 
+## Install
+
+````bash
+$ npm install --save pure-notify
+````
+
+````html
+<script src="/node_modules/pure-notify/dist/pure-notify.min.js"></script>
+<link rel="stylesheet" href="/node_modules/pure-notify/dist/pure-notify.min.css" />
+````
+
 ## Usage
 
 ````js
