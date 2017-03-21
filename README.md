@@ -32,7 +32,7 @@ PureNotify.close(errorNotify);
 
 ````js
 PureNotify.setGlobalOptions({
-	transitionTime: 600,   // default transition time
+  transitionTime: 600,   // default transition time
   timeout: 4000,         // default timeout, set to 0 means no timeout
   template: `<div class="pure-notify {type}"><div class="title">{title}</div><div class="content">{content}</div><div class="close"></div></div>`,
   className: ''
@@ -43,11 +43,11 @@ PureNotify.setGlobalOptions({
 
 ````js
 let notifyIntance = PureNotify.success/error/warn/info({
-	title: 'Title',
-	content: 'Content',
-	timeout: 4000,      // timeout to auto close notify, set to 0 means no timeout
-	template: '',       // custom template
-	className: ''       // custom container class
+  title: 'Title',
+  content: 'Content',
+  timeout: 4000,      // timeout to auto close notify, set to 0 means no timeout
+  template: '',       // custom template
+  className: ''       // custom container class
 });
 ````
 
