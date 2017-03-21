@@ -12,14 +12,14 @@ PureNotify.success({ title: 'Success message!' });
 
 // get instance
 let errorNotify = PureNotify.error({
-	title: 'Success message',
-	content: 'More detail description',
-	timeout: 0   // set timeout to 0 to disable auto close. default timeout is 4000
+  title: 'Success message',
+  content: 'More detail description',
+  timeout: 0   // set timeout to 0 to disable auto close. default timeout is 4000
 });
 // update instance
 PureNotify.update(errorNotify, {
   title: 'Title changed!'
-	content: 'content changed!'
+  content: 'content changed!'
 });
 // close instance
 PureNotify.close(errorNotify);
@@ -55,11 +55,11 @@ let notifyIntance = PureNotify.success/error/warn/info({
 
 ````js
 PureNotify.update(notifyIntance, {
-	title: 'Title',
-	content: 'Content',
-	timeout: 4000,      // timeout to auto close notify, set to 0 means no timeout
-	template: '',       // custom template
-	className: ''       // custom container class
+  title: 'Title',
+  content: 'Content',
+  timeout: 4000,      // timeout to auto close notify, set to 0 means no timeout
+  template: '',       // custom template
+  className: ''       // custom container class
 });
 ````
 
@@ -82,9 +82,9 @@ you can just use `options.className` to add custom class to notify container dom
 
 ````js
 PureNotify.info({
-	title: 'Hello',
-	content: 'World',
-	className: 'custom-notify-container'
+  title: 'Hello',
+  content: 'World',
+  className: 'custom-notify-container'
 })
 ````
 
@@ -92,11 +92,11 @@ above code will generate bollow html:
 
 ````html
 <div class="pure-notify-container custom-notify-container">
-	<div class="pure-notify info">
-		<div class="title">Hello</div>
-		<div class="content">World</div>
-		<div class="close"></div>
-	</div>
+  <div class="pure-notify info">
+    <div class="title">Hello</div>
+    <div class="content">World</div>
+    <div class="close"></div>
+  </div>
 </div>
 ````
 
@@ -106,10 +106,10 @@ moreover, you can use `options.template` to use custom html structure. for examp
 
 ````js
 PureNotify.error({
-	title: 'Hello',
-	content: 'World',
-	template: '<div class="my-notify-{type}">{title}:{content}</div>',
-	className: 'custom-notify-container'
+  title: 'Hello',
+  content: 'World',
+  template: '<div class="my-notify-{type}">{title}:{content}</div>',
+  className: 'custom-notify-container'
 })
 ````
 
@@ -117,7 +117,7 @@ above code will generate bellow html:
 
 ````html
 <div class="pure-notify-container custom-notify-container">
-	<div class="my-notify-error">Hello:World</div>
+  <div class="my-notify-error">Hello:World</div>
 </div>
 ````
 
