@@ -1,16 +1,16 @@
 # pure-notify
 
-javascript notify component without any dependencies such as jquery, react or angular
+Pure-notify is a javascript notify component without any dependencies such as jquery, react or angular.
 
 ## Install
 
-first, install by npm
+First, install via npm
 
 ````bash
 $ npm install --save pure-notify
 ````
 
-then, add to your html file
+then, add to your html file the following code
 
 ````html
 <script src="/node_modules/pure-notify/dist/pure-notify.min.js"></script>
@@ -78,9 +78,9 @@ PureNotify.update(notifyIntance, {
 });
 ````
 
-`notifyIntance` parameter is pure-notify instance return from `PureNotify.success/error/warn/info`
+`notifyIntance` parameter is pure-notify instance returned from `PureNotify.success/error/warn/info`
 
-once update notify instance, previous timeout will be clean and apply new timeout
+once having updated notify instance, previous timeout will be cleaned and new timeout applied
 
 #### close
 
@@ -88,12 +88,12 @@ once update notify instance, previous timeout will be clean and apply new timeou
 PureNotify.close(notifyInstance);
 ````
 
-if notify's timeout is 0, it won't be auto closed, and need to use `PureNotify.close` to close it manually.
+if notify's timeout is 0, it won't be auto closed; You need to use `PureNotify.close` to close it.
 
 
 ## Custom Theme
 
-you can just use `options.className` to add custom class to notify container dom. for example,
+you can just use `options.className` to add custom class to notify container DOM. for example,
 
 ````js
 PureNotify.info({
@@ -103,7 +103,7 @@ PureNotify.info({
 })
 ````
 
-above code will generate bollow html:
+The code above will generate below html:
 
 ````html
 <div class="pure-notify-container custom-notify-container">
@@ -115,9 +115,9 @@ above code will generate bollow html:
 </div>
 ````
 
-then, you can use css to override it's theme.
+then, you can use css to override its theme.
 
-moreover, you can use `options.template` to use custom html structure. for example:
+You can use `options.template` to customize html structure. for example:
 
 ````js
 PureNotify.error({
@@ -128,7 +128,7 @@ PureNotify.error({
 })
 ````
 
-above code will generate bellow html:
+The code above will generate below html:
 
 ````html
 <div class="pure-notify-container custom-notify-container">
