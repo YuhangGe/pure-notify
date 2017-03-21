@@ -4,9 +4,13 @@ javascript notify component without any dependencies such as jquery, react or an
 
 ## Install
 
+first, install by npm
+
 ````bash
 $ npm install --save pure-notify
 ````
+
+then, add to your html file
 
 ````html
 <script src="/node_modules/pure-notify/dist/pure-notify.min.js"></script>
