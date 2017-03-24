@@ -92,7 +92,7 @@ class NotifyItem {
     }
     let timeout = options.timeout;
     if (typeof timeout === 'undefined') {
-      timeout = DEFAULT_OPTIONS.timemout;
+      timeout = DEFAULT_OPTIONS.timeout;
     }
     if (timeout > 0) {
       this._timeoutTM = setTimeout(() => {
